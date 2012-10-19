@@ -1,3 +1,24 @@
 html { font-size:62.5%; }
 h1 { font-size:4rem; line-height:1.1em; margin:35px 10px 0 25px; }
 p { font-size:1.6rem; line-height:1.2em; margin:1em 10px 0 28px; color:red; }
+
+html, h1, p,{
+  width: 2000px;
+  height: 2000px;
+}
+
+body{
+  background: #cccccc url('../leaves.jpg');
+}
+
+#nav{
+  font size: 12px;
+  line-height: 75%
+  margin top: 5px;
+}
+
+#stupid{
+  width: 700px;
+  height: 700px;
+}
+

@@ -1,12 +1,27 @@
 <!DOCTYPE html>
-<1-- this is a comment -->
 <html>
 <head>
-
+    <link rel="stylesheet" href="css/style.css" />
 	<!-- include jQuery library -->
 	<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 	<script>
-
+	
+		
+		/*
+		//example
+		$(document).ready(function()(
+		
+		//words//
+		$("body").append("testing");
+		
+		//popup//
+		$("#get").on("click", function()(
+			console.log("you clicked on me");
+			));
+			
+		$("body").append("<h2>Does this fire?<h2>");
+		*/
+		
 		// This is the scary part, but it simply says: "If the object.property 'localStorage.twitterSearch' exists,
 		// iterate over it and create readable data out of it. Otherwise, create that object.property using Ajax."
 
@@ -24,7 +39,7 @@
 			// Just as the week before, this is our iteration, wherein we'll wrap URLs in an <a> tag. Here it is saying, 
 			// "For all properties of the object.property 'twitterData.results', the key will be 'index' and its value will
 			// be 'tweet'."
-			$.each(twitterData.results, function(index, tweet){
+			$.each(twitterData.results, function(index, tweet){ //this robot takes information and saves it correctly
 
 				// Remember, our value 'tweet' is itself an object. By setting a variable to the object.property 'tweet.text'
 				// we are accessing the part of the object that is the "text," AKA the tweet itself. 
@@ -45,20 +60,24 @@
 				});
 
 			});
-
+			
 			//Create a string version of our array as an object.property of the object 'localStorage'.
 			localStorage.formattedData = JSON.stringify(formattedData);
+			
+			console.log(localStorage.formattedData);
 
 			// Confirm success with a console.logged cry of joy.
 			console.log('hooray');
+			console.log("this is the raw data: ", twitterData);
+			console.log("this is the formatted data: ", formattedData);
 
 		} else {
 
 			$.ajax({
 
 				// our query URL
-				url: 'http://search.twitter.com/search.json?q=blue%20angels&rpp=5&include_entities=true&result_type=mixed',
-
+				url: 'http://search.twitter.com/search.json?q=%22Flower%22%20bitch%20OR%20whore%20OR%20hoe%20OR%20cunt%20OR%20dick%20OR%20stupid%20OR%20jerk&rpp=20&include_entities=true&result_type=mixed',
+				
 				// our specified data-type
 				dataType:'jsonp',
 
@@ -73,6 +92,7 @@
 
 					// Console.log "I think that worked," as confirmation that our Ajax was successful. 
 					console.log('I think that worked.');
+					console.log(response);
 
 				},
 
@@ -91,6 +111,24 @@
 
 </head>
 <body>
-
+	<div id="header-new">
+	  <div id="nav-top" role="navigation">
+	    <ul id="nav">
+	      <li>
+	        <a title="Home Page to Giving Tree Website" href="file:///Users/80620/Documents/cooper-union-class/files/index.html">Home</a>
+	      </li>
+	      <li>
+	        <a title="" href="">funfunfun</a>
+	      </il>
+	      <li>
+	        <a title="" href="">Contact</a>
+	      </il>
+	    </ul>
+	  </div>
+	</div>
+	<div id="stupid" href="http://a4.ec-images.myspacecdn.com/images02/135/476671c4441f4e8fafc402944811974f/l.gif">
+	</div>
+	<div id="container">
+	</div>
 </body>
 </html>

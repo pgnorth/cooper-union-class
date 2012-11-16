@@ -8,7 +8,7 @@ html, h1, p,{
 }
 
 body{
-  background: #cccccc url('../leaves.jpg');
+  background: #cccccc url('../branches.png');
 }
 
 #nav{
@@ -17,8 +17,8 @@ body{
   margin top: 5px;
 }
 
-#stupid{
-  width: 700px;
-  height: 700px;
+#title{
+  position; fixed;
+  top:25%;
+  left: 25%
 }
-

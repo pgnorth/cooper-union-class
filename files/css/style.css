@@ -1,6 +1,6 @@
-html { font-size:62.5%; }
+html { font-size:62.5%; font-family:"Garamond", Times, serif;}
 h1 { font-size:4rem; line-height:1.1em; margin:35px 10px 0 25px; }
-p { font-size:1.6rem; line-height:1.2em; margin:1em 10px 0 28px; color:red; }
+p { font-size:1.6rem; line-height:1.2em; margin:1em 10px 0 28px; color:#88C654; }
 
 html, h1, p,{
   width: 2000px;
@@ -8,7 +8,10 @@ html, h1, p,{
 }
 
 body{
-  background: #cccccc url('../branches.png');
+  background-image:url('../TREE.png');
+  background-repeat:no-repeat;
+  background-position:top right;
+  background-color:#1E1B1B;
 }
 
 #nav{
@@ -18,7 +21,15 @@ body{
 }
 
 #title{
+  margin: 100px;
+  padding-top: 450px;
+}
+
+#point1{
   position; fixed;
   top:25%;
-  left: 25%
+  left: 25%;
+  margin: auto; 
+  width: 720px;
 }
+

@@ -116,13 +116,63 @@
 
 
 	</script>
+	
+	     <meta charset="utf-8" />
+    <title>jQuery UI Draggable - Auto-scroll</title>
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+    <link rel="stylesheet" href="/resources/demos/style.css" />
+    <script>
+    $(function() {
+        $( "#draggable" ).draggable({ scroll: true });
+        $( "#draggable2" ).draggable({ scroll: true, scrollSensitivity: 100 });
+        $( "#draggable3" ).draggable({ scroll: true, scrollSpeed: 100 });
+    });
+    </script>
 
 </head>
 <body>
+<div id="draggable" class="ui-widget-content">
+    <p>I do what I want</p>
+</div>
+ 
+<div id="draggable2" class="ui-widget-content">
+    <p>Hey there</p>
+</div>
+ 
+<div id="draggable3" class="ui-widget-content">
+    <p>Twitter Bitch</p>
+</div>
+ 
+<div style="height: 100px; width: 1px;"></div>
+ 
 	 <div id="title"> <img src="title.png"/>
 	 </div>
 	 <div id="point1"> <img src="point1.png"/>
 	 </div>
+	 <div id="point2"> <img src="point2.png"/>
+	 </div>
+	 <div id="point3"> <img src="point3.png"/>
+	 </div>
+	 <div id="point4"> <img src="point4.png"/>
+	 </div>
+	 <div id="point5"> <img src="point5.png"/>
+	 </div>
+	 <div id="point6"> <img src="point6.png"/>
+	 </div>
+	 <div id="point7"> <img src="point7.png"/>
+	 </div>
+	 <div id="point8"> <img src="point8.png"/>
+	 </div>
+	 <div id="point9"> <img src="point9.png"/>
+	 </div>
+	 <div id="point10"> <img src="point10.png"/>
+	 </div>
+	 <div id="point11"> <img src="point11.png"/>
+	 </div>
+	 <div id="point12"> <img src="point12.png"/>
+</div>
 	 <p> I like Twitter </p>
 </body>
 </html>

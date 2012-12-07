@@ -26,6 +26,14 @@ body{
 }
 
 #point1{
+  position: absolute;
+  top: 90px;
+  left: 1030px;
+  margin: auto; 
+  width: 720px;
+}
+
+#point2{
   position; fixed;
   top:25%;
   left: 25%;
@@ -33,3 +41,93 @@ body{
   width: 720px;
 }
 
+#point3{
+  position; fixed;
+  top:25%;
+  left: 25%;
+  margin: auto; 
+  width: 720px;
+}
+
+#point4{
+  position; fixed;
+  top:25%;
+  left: 25%;
+  margin: auto; 
+  width: 720px;
+}
+
+#point5{
+  position; fixed;
+  top:25%;
+  left: 25%;
+  margin: auto; 
+  width: 720px;
+}
+
+#point6{
+  position; fixed;
+  top:25%;
+  left: 25%;
+  margin: auto; 
+  width: 720px;
+}
+
+#point7{
+  position; fixed;
+  top:25%;
+  left: 25%;
+  margin: auto; 
+  width: 720px;
+}
+
+#point8{
+  position; fixed;
+  top:25%;
+  left: 25%;
+  margin: auto; 
+  width: 720px;
+}
+
+#point9{
+  position; fixed;
+  top:25%;
+  left: 25%;
+  margin: auto; 
+  width: 720px;
+}
+
+#point10{
+  position; fixed;
+  top:25%;
+  left: 25%;
+  margin: auto; 
+  width: 720px;
+}
+
+#point11{
+  position; fixed;
+  top:25%;
+  left: 25%;
+  margin: auto; 
+  width: 720px;
+}
+
+#point12{
+  position; fixed;
+  top:25%;
+  left: 25%;
+  margin: auto; 
+  width: 720px;
+}
+
+#draggable, #draggable2, #draggable3 { 
+  width: 300px; 
+  height: 400px; 
+  padding: 0.5em; 
+  float: 
+  left; 
+  margin: 0 10px 10px 0;
+  opacity:0.6; 
+}
+	

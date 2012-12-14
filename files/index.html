@@ -5,6 +5,7 @@
 	<!-- include jQuery library -->
 	<script src="http://code.jquery.com/jquery-1.8.1.min.js"></script>
 	<script src="js/jquery.easing.1.3.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
 	<script>
 	$(document.body).ready(function () {
 		$("#goochi").hide();
@@ -78,6 +79,10 @@
 			console.log('hooray');
 			console.log("this is the raw data: ", twitterData);
 			console.log("this is the formatted data: ", formattedData);
+			
+			$.each(formattedData, function() {
+				
+			});
 
 		} else {
 
@@ -113,37 +118,72 @@
 
 
 		}
+       $(function() {
+        var $start_counter = $( "#event-start" ),
+            $drag_counter = $( "#event-drag" ),
+            $stop_counter = $( "#event-stop" ),
+            count =  0 ;
+ 
+        $( "#draggable" ).draggable({
+           
+            stop: function() {
+                if(count===formattedData.length){
+                	console.log('reset')
+                	count =  0 ;
+                }
+                updateCounterStatus( $stop_counter, count  );
+                $( "#draggable p" ).html(formattedData[count].text);
+                count ++;
 
+            }
+        });
+             
+        $( "#draggable" ).resizable({
+            animate: true
+        });
+        function updateCounterStatus( $event_counter, new_count ) {
+            // first update the status visually...
+            if ( !$event_counter.hasClass( "ui-state-hover" ) ) {
+                $event_counter.addClass( "ui-state-hover" )
+                    .siblings().removeClass( "ui-state-hover" );
+            }
+            // ...then update the numbers
+            $( "span.count", $event_counter ).text( new_count );
+        }
+    });
 
 	</script>
 	
-	     <meta charset="utf-8" />
-    <title>jQuery UI Draggable - Auto-scroll</title>
+	<meta charset="utf-8" />
+    <title>jQuery UI Draggable - Events</title>
     <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
-    <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
-    <script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+   
     <link rel="stylesheet" href="/resources/demos/style.css" />
-    <script>
-    $(function() {
-        $( "#draggable" ).draggable({ scroll: true });
-        $( "#draggable2" ).draggable({ scroll: true, scrollSensitivity: 100 });
-        $( "#draggable3" ).draggable({ scroll: true, scrollSpeed: 100 });
-    });
-    </script>
+    <style>
+    #draggable { position: absolute;
+    top: 50%;
+    left: 50%;  
+    width: 200px; 
+    height: 400px;
+    margin: -200px 0 0 -100px;
+    padding: 0 1em; }
+    #draggable ul li { margin: 20px; padding: 1px; } * html #draggable ul li { height: 1%; }
+    #draggable ul li span.ui-icon { float: left; }
+    #draggable ul li span.count { font-weight: bold; }
+    </style>
 
 </head>
 <body>
-<div id="draggable" class="ui-widget-content">
-    <p>I do what I want</p>
-</div>
+<div id="draggable" class="ui-widget ui-widget-content">
  
-<div id="draggable2" class="ui-widget-content">
-    <p>Hey there</p>
-</div>
+    <h2>Twitter Bitch</h2>
  
-<div id="draggable3" class="ui-widget-content">
-    <p>Twitter Bitch</p>
+    <ul class="ui-helper-reset">    
+        <li id="event-stop" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-stop"></span>Number of Tweets <span class="count">0</span>x</li>
+    </ul>
+    <p></p>
 </div>
+
  
 <div style="height: 100px; width: 1px;"></div>
  
